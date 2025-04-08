@@ -9,9 +9,11 @@ public class Persona {
     private String telefono;
     private String correoElectronico;
     private List<Direccion> direcciones;
+    private List<Institucion> instituciones;
 
     public Persona() {
         this.direcciones = new ArrayList<>();
+        this.instituciones = new ArrayList<>();
     }
 
     //no ponemos entre parentesis la lista, no queremos pasar la lista de direcciones, es porque tenemos una relacion de agregacion
@@ -22,6 +24,7 @@ public class Persona {
         this.telefono = telefono;
         this.correoElectronico = correoElectronico;
         this.direcciones = new ArrayList<>();
+        this.instituciones = new ArrayList<>();
     }
 
     public String getCedula() {
@@ -72,6 +75,13 @@ public class Persona {
         return direcciones;
     }
 
+    public void addInstitucion(Institucion institucion){
+        this.instituciones.add(institucion);
+    }
+    public List<Institucion> getInstituciones() {
+        return instituciones;
+    }
+
     @Override
     public String toString() {
         return "Persona{" +
@@ -80,7 +90,8 @@ public class Persona {
                 ", apellido='" + apellido + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", correoElectronico='" + correoElectronico + '\'' +
-                ", direcciones=" + direcciones + //Siempre las clases deben tener el toString para que se puedan imprimir las direcciones
+                ", direcciones=" + direcciones +
+                ", instituciones=" + instituciones +
                 '}';
     }
 }
