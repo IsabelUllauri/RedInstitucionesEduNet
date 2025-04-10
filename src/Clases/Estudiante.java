@@ -1,9 +1,10 @@
 package Clases;
 
-public class Estudiante {
+public class Estudiante extends Persona{
     private String carrera;
 
     public Estudiante(String carrera) {
+        super();
         this.carrera = carrera;
     }
 
@@ -15,4 +16,10 @@ public class Estudiante {
         this.carrera = carrera;
     }
 
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "carrera: '" + carrera + '\'' +
+                '}';
+    }
 }

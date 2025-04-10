@@ -1,4 +1,6 @@
 package Clases;
+import enums.TipoDireccion;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.GregorianCalendar;
@@ -11,15 +13,15 @@ public class Institucion {
     private List<Asignacion> asignaciones;
 
 
+
     public Institucion() {
         this.asignaciones = new ArrayList<Asignacion>();
     }
 
-    public Institucion(int id, String nombre, List<String> sede, Direccion direccion, List<String> asignaciones) {
+    public Institucion(int id, String nombre, List<String> sede, List<String> asignaciones) {
         this.id = id;
         this.nombre = nombre;
         this.sede = sede;
-        this.direccion = direccion;
         this.asignaciones= new ArrayList<>();
 
     }
@@ -48,12 +50,12 @@ public class Institucion {
         this.sede = sede;
     }
 
-    public Direccion getDireccion() {
-        return direccion;
+    public void addDireccion(TipoDireccion tipoDireccion, String callePrincipal, String calleSecundaria, String numeracion, String pais, String provincia, String ciudad) {
+            this.direccion = new Direccion( tipoDireccion, callePrincipal, calleSecundaria, numeracion, pais, provincia, ciudad);
     }
 
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
+    public Direccion getDireccion() {
+        return direccion;
     }
 
     public void addAsignacion(Asignacion asignacion) {
@@ -63,14 +65,30 @@ public class Institucion {
         return asignaciones;
     }
 
+
+    public static void  ImprimirInstitucion (Institucion institucion){
+        System.out.println("Nombre: " + institucion.getNombre());
+        System.out.println("Sedes: " + institucion.getSede());
+        System.out.println("Dirección: " + institucion.getDireccion());
+
+        System.out.println("Personas asignadas:");
+        for ( Asignacion asignacion: institucion.getAsignaciones()){
+            System.out.println("Persona:  " + asignacion.getPersona());
+            System.out.println("Rol:  " + asignacion.getRol());
+
+        }
+
+
+    }
+
     @Override
     public String toString() {
         return "Institucion{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", sede=" + sede +
-                ", direccion=" + direccion +
-                ", asignaciones=" + asignaciones +
+                "id: " + id +
+                ", nombre: '" + nombre + '\'' +
+                ", sede: " + sede +
+                ", direccion: " + direccion +
+                ", asignaciones: " + asignaciones +
                 '}';
     }
 }

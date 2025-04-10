@@ -1,7 +1,7 @@
 package Clases;
 import java.util.GregorianCalendar;
 
-public class Visitante {
+public class Visitante extends Persona {
     private GregorianCalendar fechaEntrada;
     private GregorianCalendar fechaSalida;
     private String motivo;
@@ -34,5 +34,14 @@ public class Visitante {
 
     public void setMotivo(String motivo) {
         this.motivo = motivo;
+    }
+
+    @Override
+    public String toString() {
+        return "Visitante{" +
+                "fechaEntrada: " + fechaEntrada +
+                ", fechaSalida: " + fechaSalida +
+                ", motivo: '" + motivo + '\'' +
+                '}';
     }
 }

@@ -2,7 +2,7 @@ package Clases;
 import java.util.List;
 
 
-public class Docente {
+public class Docente extends Persona {
 
         private List<String> titulosAcademicos;
         private List<String> areasDeEspecializacion;
@@ -27,4 +27,12 @@ public class Docente {
         public void setAreasDeEspecializacion(List<String> areasDeEspecializacion) {
             this.areasDeEspecializacion = areasDeEspecializacion;
         }
+
+    @Override
+    public String toString() {
+        return "Docente{" +
+                "titulosAcademicos: " + titulosAcademicos +
+                ", areasDeEspecializacion: " + areasDeEspecializacion +
+                '}';
+    }
 }
