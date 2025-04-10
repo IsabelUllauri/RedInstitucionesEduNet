@@ -10,9 +10,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        //institucion 1
-        Direccion direccion1 = new Direccion(enums.TipoDireccion.INSTITUCION,"Calle vieja","Av. Solano", "1-25","Ecuador","Azuay", "Cuenca");
 
+        Direccion direccion1 = new Direccion(enums.TipoDireccion.INSTITUCION,"Calle vieja","Av. Solano", "1-25","Ecuador","Azuay", "Cuenca");
+        Direccion direccion2 = new Direccion(TipoDireccion.INSTITUCION, "Av. Pueblo Achuar", "Calle De Las Perlas", "1-75", "Ecuador","Azuay", "Cuenca");
+
+
+        //institucion 1
         Institucion institucion1  = new Institucion();
         institucion1.setId(1);
         institucion1.setNombre("Universidad Politecnica Saleciana");
@@ -22,9 +25,9 @@ public class Main {
         //institucion2
         Institucion institucion2 = new Institucion();
         institucion2.setId(2);
-        institucion1.setNombre("Universidad del Azuay");
-        institucion1.setSede(Arrays.asList("Challuabamba"));
-        institucion1.addDireccion(TipoDireccion.INSTITUCION, "Av. Pueblo Achuar", "Calle De Las Perlas", "1-75", "Ecuador","Azuay", "Cuenca");
+        institucion2.setNombre("Universidad del Azuay");
+        institucion2.setSede(Arrays.asList("Challuabamba"));
+        institucion2.addDireccion(TipoDireccion.INSTITUCION, "Av. Pueblo Achuar", "Calle De Las Perlas", "1-75", "Ecuador","Azuay", "Cuenca");
 
         //personas
         Estudiante estudiante1= new Estudiante("Computacion");

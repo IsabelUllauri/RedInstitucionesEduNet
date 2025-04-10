@@ -38,6 +38,8 @@ public class Visitante extends Persona {
 
     @Override
     public String toString() {
+
+
         return "Visitante{" +
                 "fechaEntrada: " + fechaEntrada +
                 ", fechaSalida: " + fechaSalida +
