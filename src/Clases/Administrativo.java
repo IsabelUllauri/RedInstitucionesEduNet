@@ -2,7 +2,7 @@ package Clases;
 import java.util.List;
 
 
-public class Administrativo {
+public class Administrativo extends Persona{
 
         private List<String> cargos;
         private List<String> responsabilidades;
@@ -28,4 +28,11 @@ public class Administrativo {
             this.responsabilidades = responsabilidades;
         }
 
+    @Override
+    public String toString() {
+        return "Administrativo{" +
+                "cargos: " + cargos +
+                ", responsabilidades: " + responsabilidades +
+                '}';
+    }
 }

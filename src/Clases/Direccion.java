@@ -16,13 +16,14 @@ public class Direccion {
     }
 
     public Direccion(TipoDireccion tipoDireccion, String callePrincipal, String calleSecundaria, String numeracion, String pais, String provincia, String ciudad) {
-        this.tipoDireccion = tipoDireccion;
+        this.tipoDireccion = tipoDireccion.INSTITUCION;
         this.callePrincipal = callePrincipal;
         this.calleSecundaria = calleSecundaria;
         this.numeracion = numeracion;
         this.pais = pais;
         this.provincia = provincia;
         this.ciudad = ciudad;
+
     }
 
     public String getCallePrincipal() {
@@ -84,13 +85,13 @@ public class Direccion {
     @Override
     public String toString() {
         return "Direccion{" +
-                "tipoDireccion=" + tipoDireccion +
-                ", callePrincipal='" + callePrincipal + '\'' +
-                ", calleSecundaria='" + calleSecundaria + '\'' +
-                ", numeracion='" + numeracion + '\'' +
-                ", pais='" + pais + '\'' +
-                ", provincia='" + provincia + '\'' +
-                ", ciudad='" + ciudad + '\'' +
+                "tipoDireccion: " + tipoDireccion +
+                ", callePrincipal: '" + callePrincipal + '\'' +
+                ", calleSecundaria: '" + calleSecundaria + '\'' +
+                ", numeracion: '" + numeracion + '\'' +
+                ", pais: '" + pais + '\'' +
+                ", provincia: '" + provincia + '\'' +
+                ", ciudad: '" + ciudad + '\'' +
                 '}';
     }
 }
